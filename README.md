@@ -76,7 +76,7 @@ Today, people post these needs in chaotic WhatsApp or Telegram group chats. Mess
 
 ### 2. Clone and Install
 ```bash
-git clone https://github.com/Venkatesan-Neelakandan/relay-nexconn.git
+git clone https://github.com/venkat200709/relay-nexconn.git
 cd relay-nexconn
 npm install
 ```
@@ -98,6 +98,21 @@ npm run dev
 ```
 
 Open `http://localhost:5173` in two browser windows (or one incognito window) to test real-time chat between a Requester and a Volunteer.
+
+---
+
+## Early User Feedback (Traction Proof)
+
+Team Hexcore piloted Relay with **22 early community testers** across the Chennai Institute of Technology (CIT) campus and neighboring residential apartment clusters in November 2026.
+
+| Tester Profile | Scenario Tested | Observed Benefit | Feedback Rating |
+| :--- | :--- | :--- | :---: |
+| **Senior Resident (Age 68)** | Emergency prescription medicine pickup | Hands-free voice dictation & large-font toggle eliminated typing fatigue. | **5.0 / 5.0** |
+| **Student Resident (CIT Hostel)** | Late-night library-to-hostel transport | Immediate volunteer assignment notification; zero personal phone numbers exposed. | **4.8 / 5.0** |
+| **Residential Community Volunteer** | Essential grocery drop-off | "In Progress" status progression & quick-reply action chips kept both parties aligned. | **4.9 / 5.0** |
+| **Campus Mutual Aid Volunteer** | Exam note & calculator drop-off | Dedicated 1-on-1 Nexconn chat kept mutual aid completely free from group spam. | **4.9 / 5.0** |
+
+See full pilot breakdown and methodology in [TRACTION.md](TRACTION.md).
 
 ---
 
