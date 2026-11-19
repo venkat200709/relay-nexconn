@@ -8,7 +8,7 @@
 
     @page {
       size: A4;
-      margin: 14mm 16mm;
+      margin: 12mm 15mm;
     }
 
     * {
@@ -21,14 +21,17 @@
       font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
       color: #0f172a;
       background: #ffffff;
-      line-height: 1.5;
-      font-size: 13px;
+      line-height: 1.45;
+      font-size: 12.5px;
     }
 
     .page {
       page-break-after: always;
       position: relative;
-      height: 100%;
+      display: flex;
+      flex-direction: column;
+      min-height: 265mm;
+      max-height: 265mm;
     }
 
     .page:last-child {
@@ -40,12 +43,12 @@
       justify-content: space-between;
       align-items: center;
       border-bottom: 2px solid #e2e8f0;
-      padding-bottom: 10px;
-      margin-bottom: 18px;
+      padding-bottom: 8px;
+      margin-bottom: 14px;
     }
 
     .brand-title {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 800;
       color: #4f46e5;
       display: flex;
@@ -72,8 +75,8 @@
       background: #f8fafc;
       border: 2px dashed #6366f1;
       border-radius: 10px;
-      padding: 10px 14px;
-      margin: 14px 0;
+      padding: 8px 12px;
+      margin: 10px 0 12px 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -87,11 +90,11 @@
     }
 
     h2 {
-      font-size: 17px;
+      font-size: 15.5px;
       font-weight: 800;
       color: #1e1b4b;
-      margin-top: 14px;
-      margin-bottom: 6px;
+      margin-top: 10px;
+      margin-bottom: 5px;
       display: flex;
       align-items: center;
       gap: 6px;
@@ -99,33 +102,33 @@
 
     p {
       color: #334155;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .card {
       background: #f8fafc;
       border: 1px solid #e2e8f0;
       border-radius: 10px;
-      padding: 12px;
-      margin-bottom: 10px;
+      padding: 10px;
+      margin-bottom: 8px;
     }
 
     .grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
+      gap: 10px;
     }
 
     .grid-3 {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 10px;
+      gap: 8px;
     }
 
     .feature-item {
       border-left: 3px solid #6366f1;
       padding-left: 10px;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .feature-name {
@@ -135,15 +138,15 @@
     }
 
     .feature-desc {
-      font-size: 11.5px;
+      font-size: 11px;
       color: #475569;
     }
 
     .table-spec {
       width: 100%;
       border-collapse: collapse;
-      margin: 10px 0;
-      font-size: 11.5px;
+      margin: 8px 0;
+      font-size: 11px;
     }
 
     .table-spec th {
@@ -151,19 +154,19 @@
       color: #334155;
       font-weight: 700;
       text-align: left;
-      padding: 6px 10px;
+      padding: 5px 8px;
       border: 1px solid #cbd5e1;
     }
 
     .table-spec td {
-      padding: 6px 10px;
+      padding: 5px 8px;
       border: 1px solid #e2e8f0;
       color: #334155;
     }
 
     .code-span {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
+      font-size: 10.5px;
       background: #e2e8f0;
       padding: 1px 4px;
       border-radius: 4px;
@@ -171,10 +174,7 @@
     }
 
     .footer {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
+      margin-top: auto;
       display: flex;
       justify-content: space-between;
       font-size: 10px;
@@ -195,18 +195,18 @@
       </div>
       <div style="text-align: right;">
         <span class="badge badge-primary">Nexconn Build Challenge 2026</span>
-        <div style="font-size: 11px; color: #475569; margin-top: 2px;">Track: Open Innovation</div>
+        <div style="font-size: 10.5px; color: #475569; margin-top: 2px;">Track: Open Innovation</div>
       </div>
     </div>
 
     <div class="app-key-box">
       <div>
-        <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: #475569;">Official Nexconn App Key:</span>
+        <span style="font-size: 10.5px; font-weight: 700; text-transform: uppercase; color: #475569;">Official Nexconn App Key:</span>
         <div class="app-key-text">e0x9wycferqnq</div>
       </div>
       <div>
-        <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: #475569;">Data Center:</span>
-        <div style="font-weight: 700; color: #0f172a; font-size: 12px;">Singapore (api.sg-light-api.com)</div>
+        <span style="font-size: 10.5px; font-weight: 700; text-transform: uppercase; color: #475569;">Data Center:</span>
+        <div style="font-weight: 700; color: #0f172a; font-size: 11.5px;">Singapore (api.sg-light-api.com)</div>
       </div>
     </div>
 
@@ -222,25 +222,25 @@
     </p>
 
     <h2>2. Who Has This Problem</h2>
-    <div class="grid-3" style="margin-top: 8px;">
+    <div class="grid-3" style="margin-top: 6px;">
       <div class="card">
         <span class="badge badge-danger">Elderly & Vulnerable</span>
-        <div style="font-weight: 700; font-size: 12px; margin-top: 4px;">Seniors living alone</div>
-        <p style="font-size: 11px; margin-top: 4px; color: #475569;">
+        <div style="font-weight: 700; font-size: 11.5px; margin-top: 4px;">Seniors living alone</div>
+        <p style="font-size: 10.5px; margin-top: 4px; color: #475569; margin-bottom: 0;">
           Mobility challenges prevent quick pharmacy or grocery trips. They need an accessible interface with voice input and clear status confirmations.
         </p>
       </div>
       <div class="card">
         <span class="badge badge-amber">Homebound Parents</span>
-        <div style="font-weight: 700; font-size: 12px; margin-top: 4px;">Parents with sick dependents</div>
-        <p style="font-size: 11px; margin-top: 4px; color: #475569;">
+        <div style="font-weight: 700; font-size: 11.5px; margin-top: 4px;">Parents with sick dependents</div>
+        <p style="font-size: 10.5px; margin-top: 4px; color: #475569; margin-bottom: 0;">
           Cannot leave home during illness spikes. Group chats are too messy to find a neighbor heading to the same store.
         </p>
       </div>
       <div class="card">
         <span class="badge badge-success">Local Volunteers</span>
-        <div style="font-weight: 700; font-size: 12px; margin-top: 4px;">Willing neighbours</div>
-        <p style="font-size: 11px; margin-top: 4px; color: #475569;">
+        <div style="font-weight: 700; font-size: 11.5px; margin-top: 4px;">Willing neighbours</div>
+        <p style="font-size: 10.5px; margin-top: 4px; color: #475569; margin-bottom: 0;">
           Want to help nearby residents without broadcasting their phone number to 500 members in an unmoderated community group.
         </p>
       </div>
@@ -359,7 +359,7 @@
     </table>
 
     <h2>5. Architecture & Security Boundary</h2>
-    <div class="card" style="margin-top: 6px; font-family: 'JetBrains Mono', monospace; font-size: 11px; background: #0f172a; color: #f8fafc; padding: 12px; border-radius: 8px;">
+    <div class="card" style="margin-top: 4px; font-family: 'JetBrains Mono', monospace; font-size: 10px; background: #0f172a; color: #f8fafc; padding: 10px; border-radius: 8px; line-height: 1.4;">
 +---------------------------------------------------------------------------------------------+<br>
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RELAY FULL-STACK ARCHITECTURE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 <br>+---------------------------------------------------------------------------------------------+<br>
@@ -406,21 +406,21 @@
       Relay is designed as an accessible, localized community product that scales from residential apartment complexes to city-wide volunteer associations:
     </p>
 
-    <div class="grid-2" style="margin-top: 8px;">
+    <div class="grid-2" style="margin-top: 6px;">
       <div class="card">
-        <div style="font-weight: 700; color: #4338ca; font-size: 12px; margin-bottom: 4px;">Target Distribution Channels</div>
-        <ul style="padding-left: 16px; font-size: 11.5px; color: #334155; line-height: 1.6;">
-          <li><strong>Residential Welfare Associations (RWAs) & Condos:</strong> Onboarding apartment complexes where residents already manage maintenance fees and community boards.</li>
-          <li><strong>Senior Care NGOs:</strong> Partnering with local elder care networks to handle daily non-emergency medicine runs and check-ins.</li>
-          <li><strong>Campus Volunteer Squads:</strong> University student mutual aid for note sharing, medicine drops, and campus transport.</li>
+        <div style="font-weight: 700; color: #4338ca; font-size: 11.5px; margin-bottom: 3px;">Target Distribution Channels</div>
+        <ul style="padding-left: 14px; font-size: 10.5px; color: #334155; line-height: 1.5;">
+          <li><strong>Residential Welfare Associations (RWAs):</strong> Onboarding apartment complexes where residents manage maintenance fees.</li>
+          <li><strong>Senior Care NGOs:</strong> Partnering with local elder care networks for daily non-emergency medicine runs and check-ins.</li>
+          <li><strong>Campus Volunteer Squads:</strong> University student mutual aid for note sharing, medicine drops, and transport.</li>
         </ul>
       </div>
 
       <div class="card">
-        <div style="font-weight: 700; color: #4338ca; font-size: 12px; margin-bottom: 4px;">Sustainable Unit Economics</div>
-        <ul style="padding-left: 16px; font-size: 11.5px; color: #334155; line-height: 1.6;">
-          <li><strong>Free Tier with Nexconn Chat:</strong> 10,000 monthly active users on Nexconn Free Plan keeps community operational costs near zero during early adoption.</li>
-          <li><strong>Sponsored Neighborhood Nodes:</strong> Local pharmacies, clinics, and grocery stores can sponsor verified community dispatch hubs for a nominal monthly fee.</li>
+        <div style="font-weight: 700; color: #4338ca; font-size: 11.5px; margin-bottom: 3px;">Sustainable Unit Economics</div>
+        <ul style="padding-left: 14px; font-size: 10.5px; color: #334155; line-height: 1.5;">
+          <li><strong>Free Tier with Nexconn:</strong> 10,000 monthly active users on Nexconn Free Plan keeps community server costs near zero.</li>
+          <li><strong>Sponsored Neighborhood Nodes:</strong> Local pharmacies, clinics, and grocery stores can sponsor verified community hubs.</li>
           <li><strong>Privacy-First:</strong> No ads, no data harvesting. All personal data stays isolated to ticket duration.</li>
         </ul>
       </div>
@@ -428,7 +428,7 @@
 
     <h2>7. Early User Feedback (Traction Proof)</h2>
     <p>
-      We tested Relay with 22 student and community testers at CIT Chennai and nearby residential clusters. Testers ran cross-window simulations on both laptops and mobile devices:
+      We tested Relay with 22 student and community testers at CIT Chennai and nearby residential clusters:
     </p>
 
     <table class="table-spec">
@@ -463,28 +463,28 @@
     </table>
 
     <h2>8. Team Hexcore</h2>
-    <div class="grid-2" style="margin-top: 8px;">
-      <div class="card" style="border-left: 3px solid #6366f1;">
-        <div style="font-weight: 800; font-size: 13px; color: #1e1b4b;">Venkatesan Neelakandan</div>
-        <div style="font-size: 11px; color: #6366f1; font-weight: 600;">Team Leader • Full-Stack & SDK Integration</div>
-        <div style="font-size: 11px; color: #64748b; margin-top: 2px;">venkatesann.cse2025@citchennai.net</div>
-        <p style="font-size: 11px; margin-top: 6px; color: #475569;">
+    <div class="grid-2" style="margin-top: 6px;">
+      <div class="card" style="border-left: 3px solid #6366f1; padding: 8px 10px;">
+        <div style="font-weight: 800; font-size: 12px; color: #1e1b4b;">Venkatesan Neelakandan</div>
+        <div style="font-size: 10.5px; color: #6366f1; font-weight: 600;">Team Leader • Full-Stack & SDK Integration</div>
+        <div style="font-size: 10px; color: #64748b; margin-top: 1px;">venkatesann.cse2025@citchennai.net</div>
+        <p style="font-size: 10.5px; margin-top: 4px; color: #475569; margin-bottom: 0;">
           Built the backend token signing engine, configured Nexconn Chat and Engine Web SDK handlers, structured real-time direct channels, managed git repository, and handled deployment.
         </p>
       </div>
 
-      <div class="card" style="border-left: 3px solid #a855f7;">
-        <div style="font-weight: 800; font-size: 13px; color: #1e1b4b;">Sasmita Shree P</div>
-        <div style="font-size: 11px; color: #a855f7; font-weight: 600;">Team Member • UX, Testing & Outreach</div>
-        <div style="font-size: 11px; color: #64748b; margin-top: 2px;">sasmitashreep.cse2025@citchennai.net</div>
-        <p style="font-size: 11px; margin-top: 6px; color: #475569;">
+      <div class="card" style="border-left: 3px solid #a855f7; padding: 8px 10px;">
+        <div style="font-weight: 800; font-size: 12px; color: #1e1b4b;">Sasmita Shree P</div>
+        <div style="font-size: 10.5px; color: #a855f7; font-weight: 600;">Team Member • UX, Testing & Outreach</div>
+        <div style="font-size: 10px; color: #64748b; margin-top: 1px;">sasmitashreep.cse2025@citchennai.net</div>
+        <p style="font-size: 10.5px; margin-top: 4px; color: #475569; margin-bottom: 0;">
           Led responsive UI refinement, mobile drawer transitions, touch-target ergonomics, multi-device edge case testing, and coordinated early community tester feedback.
         </p>
       </div>
     </div>
 
-    <div style="margin-top: 14px; padding: 10px; background: #eef2ff; border-radius: 8px; border: 1px solid #c7d2fe; text-align: center;">
-      <span style="font-size: 11px; font-weight: 700; color: #3730a3;">
+    <div style="margin-top: 10px; margin-bottom: 12px; padding: 8px 12px; background: #eef2ff; border-radius: 8px; border: 1px solid #c7d2fe; text-align: center;">
+      <span style="font-size: 10.5px; font-weight: 700; color: #3730a3;">
         Submitted to Reskilll Portal • Team Hexcore (Code: 7OQFXM) • Track: Open Innovation • App Key: e0x9wycferqnq
       </span>
     </div>
