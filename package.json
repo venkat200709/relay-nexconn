@@ -7,7 +7,7 @@
     "dev": "concurrently -k -n \"api,web\" -c \"cyan,magenta\" \"tsx server/index.ts\" \"vite\"",
     "dev:web": "vite",
     "dev:server": "tsx server/index.ts",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "start": "tsx server/index.ts"
   },
@@ -15,6 +15,14 @@
     "@nexconn/chat": "^26.5.0",
     "@nexconn/chatui": "^26.5.0",
     "@nexconn/engine": "^26.5.0",
+    "@types/canvas-confetti": "^1.9.0",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.1",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
     "canvas-confetti": "^1.9.4",
     "clsx": "^2.1.1",
     "cors": "^2.8.5",
@@ -22,24 +30,16 @@
     "express": "^4.21.2",
     "lit": "^3.3.2",
     "lucide-react": "^0.475.0",
+    "postcss": "^8.5.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwind-merge": "^3.0.1",
+    "tailwindcss": "^3.4.17",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3",
-    "vite": "^6.1.0",
-    "@vitejs/plugin-react": "^4.3.4",
-    "tailwindcss": "^3.4.17",
-    "postcss": "^8.5.1",
-    "autoprefixer": "^10.4.20"
+    "vite": "^6.1.0"
   },
   "devDependencies": {
-    "@types/canvas-confetti": "^1.9.0",
-    "@types/cors": "^2.8.17",
-    "@types/express": "^5.0.0",
-    "@types/node": "^22.13.1",
-    "@types/react": "^18.3.18",
-    "@types/react-dom": "^18.3.5",
     "concurrently": "^9.1.2"
   }
 }
