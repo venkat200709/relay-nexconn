@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Relay — Nexconn Build Challenge 2026 Project Write-up</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+    @page {
+      size: A4;
+      margin: 14mm 16mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      color: #0f172a;
+      background: #ffffff;
+      line-height: 1.5;
+      font-size: 13px;
+    }
+
+    .page {
+      page-break-after: always;
+      position: relative;
+      height: 100%;
+    }
+
+    .page:last-child {
+      page-break-after: avoid;
+    }
+
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 10px;
+      margin-bottom: 18px;
+    }
+
+    .brand-title {
+      font-size: 24px;
+      font-weight: 800;
+      color: #4f46e5;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-radius: 6px;
+    }
+
+    .badge-primary { background: #e0e7ff; color: #4338ca; }
+    .badge-danger { background: #ffe4e6; color: #be123c; }
+    .badge-success { background: #dcfce7; color: #15803d; }
+    .badge-amber { background: #fef3c7; color: #b45309; }
+
+    .app-key-box {
+      background: #f8fafc;
+      border: 2px dashed #6366f1;
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin: 14px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .app-key-text {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 700;
+      color: #4338ca;
+    }
+
+    h2 {
+      font-size: 17px;
+      font-weight: 800;
+      color: #1e1b4b;
+      margin-top: 14px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    p {
+      color: #334155;
+      margin-bottom: 8px;
+    }
+
+    .card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 12px;
+      margin-bottom: 10px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+    }
+
+    .feature-item {
+      border-left: 3px solid #6366f1;
+      padding-left: 10px;
+      margin-bottom: 8px;
+    }
+
+    .feature-name {
+      font-weight: 700;
+      color: #1e1b4b;
+      font-size: 12px;
+    }
+
+    .feature-desc {
+      font-size: 11.5px;
+      color: #475569;
+    }
+
+    .table-spec {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+      font-size: 11.5px;
+    }
+
+    .table-spec th {
+      background: #f1f5f9;
+      color: #334155;
+      font-weight: 700;
+      text-align: left;
+      padding: 6px 10px;
+      border: 1px solid #cbd5e1;
+    }
+
+    .table-spec td {
+      padding: 6px 10px;
+      border: 1px solid #e2e8f0;
+      color: #334155;
+    }
+
+    .code-span {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      background: #e2e8f0;
+      padding: 1px 4px;
+      border-radius: 4px;
+      color: #0f172a;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: #94a3b8;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE 1 -->
+  <div class="page">
+    <div class="header-bar">
+      <div>
+        <div class="brand-title">Relay</div>
+        <div style="font-size: 11px; color: #64748b; font-weight: 600;">Dispatch-First Chat for Neighbourhood Help</div>
+      </div>
+      <div style="text-align: right;">
+        <span class="badge badge-primary">Nexconn Build Challenge 2026</span>
+        <div style="font-size: 11px; color: #475569; margin-top: 2px;">Track: Open Innovation</div>
+      </div>
+    </div>
+
+    <div class="app-key-box">
+      <div>
+        <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: #475569;">Official Nexconn App Key:</span>
+        <div class="app-key-text">e0x9wycferqnq</div>
+      </div>
+      <div>
+        <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: #475569;">Data Center:</span>
+        <div style="font-weight: 700; color: #0f172a; font-size: 12px;">Singapore (api.sg-light-api.com)</div>
+      </div>
+    </div>
+
+    <h2>1. Why We Built Relay</h2>
+    <p>
+      In residential communities, urgent requests for help happen daily. An elderly neighbour runs out of heart medicine during heavy rain. A single parent needs an emergency pack of baby diapers for a sick child. A newcomer cannot decipher the legal wording on a clinic follow-up form.
+    </p>
+    <p>
+      Today, neighbourhoods try to solve this with WhatsApp or Telegram group chats. These groups quickly turn into noise. Requests get buried beneath unrelated chatter, nobody knows if an item has already been picked up, and volunteers hesitate to jump in because there is no accountability or privacy. Requesters are left anxious, unsure if anyone is coming.
+    </p>
+    <p>
+      We built <strong>Relay</strong> to give neighbourhoods a dispatch-style chat structure. When a resident posts a request, Relay opens a dedicated ticket. Volunteers see a live feed of active needs, one person claims it, and the app connects them in a dedicated 1-on-1 chat room powered by Nexconn. Both sides see an unambiguous four-stage progression (<span class="code-span">Open</span> &rarr; <span class="code-span">Claimed</span> &rarr; <span class="code-span">In Progress</span> &rarr; <span class="code-span">Resolved</span>) so that nothing falls through the cracks.
+    </p>
+
+    <h2>2. Who Has This Problem</h2>
+    <div class="grid-3" style="margin-top: 8px;">
+      <div class="card">
+        <span class="badge badge-danger">Elderly & Vulnerable</span>
+        <div style="font-weight: 700; font-size: 12px; margin-top: 4px;">Seniors living alone</div>
+        <p style="font-size: 11px; margin-top: 4px; color: #475569;">
+          Mobility challenges prevent quick pharmacy or grocery trips. They need an accessible interface with voice input and clear status confirmations.
+        </p>
+      </div>
+      <div class="card">
+        <span class="badge badge-amber">Homebound Parents</span>
+        <div style="font-weight: 700; font-size: 12px; margin-top: 4px;">Parents with sick dependents</div>
+        <p style="font-size: 11px; margin-top: 4px; color: #475569;">
+          Cannot leave home during illness spikes. Group chats are too messy to find a neighbor heading to the same store.
+        </p>
+      </div>
+      <div class="card">
+        <span class="badge badge-success">Local Volunteers</span>
+        <div style="font-weight: 700; font-size: 12px; margin-top: 4px;">Willing neighbours</div>
+        <p style="font-size: 11px; margin-top: 4px; color: #475569;">
+          Want to help nearby residents without broadcasting their phone number to 500 members in an unmoderated community group.
+        </p>
+      </div>
+    </div>
+
+    <h2>3. How Relay Works</h2>
+    <div class="card" style="margin-top: 6px;">
+      <div class="grid-2">
+        <div class="feature-item">
+          <div class="feature-name">1. Post Need with Urgency & Voice</div>
+          <div class="feature-desc">Requesters pick a category (Medicine, Groceries, Ride, Translation, Fix), select urgency (High/Medium/Normal), and type or dictate details hands-free.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-name">2. Live Dispatch Feed</div>
+          <div class="feature-desc">Volunteers see a structured feed showing exact needs, street location, and urgency timers. One-click claim assigns the task.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-name">3. Dedicated Nexconn Room</div>
+          <div class="feature-desc">Claiming spins up a direct channel room between the two users. No personal phone numbers are shared.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-name">4. Lifecycle Tracking & Resolution</div>
+          <div class="feature-desc">Interactive status stepper updates live. Once completed, a summary and star appreciation note are archived in the neighbourhood record.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span>Team Hexcore: Venkatesan & Sasmita</span>
+      <span>Relay &mdash; Page 1 of 3</span>
+    </div>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="page">
+    <div class="header-bar">
+      <div>
+        <div class="brand-title" style="font-size: 18px;">Nexconn SDK Integration Architecture</div>
+        <div style="font-size: 10px; color: #64748b;">Every SDK Feature Documented with Exact Call Location</div>
+      </div>
+      <div style="text-align: right;">
+        <span class="badge badge-primary">AppKey: e0x9wycferqnq</span>
+      </div>
+    </div>
+
+    <h2>4. Nexconn Chat SDK Features Used</h2>
+    <p>
+      Relay is built strictly on the official Nexconn Chat SDK (<span class="code-span">@nexconn/chat</span> v26.5.0), Nexconn Engine (<span class="code-span">@nexconn/engine</span> v26.5.0), and Nexconn Platform Chat API. We avoid placeholder methods or mock adapters.
+    </p>
+
+    <table class="table-spec">
+      <thead>
+        <tr>
+          <th style="width: 28%;">SDK Feature / API Method</th>
+          <th style="width: 24%;">File & Location</th>
+          <th style="width: 48%;">Purpose in Relay Dispatch Workflow</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="code-span">NCEngine.initialize</span></td>
+          <td><span class="code-span">src/lib/nexconn.ts</span></td>
+          <td>Initializes the client messaging engine with App Key <span class="code-span">e0x9wycferqnq</span> and Singapore data center (<span class="code-span">AreaCode.SG</span>).</td>
+        </tr>
+        <tr>
+          <td><span class="code-span">NCEngine.connect</span></td>
+          <td><span class="code-span">src/lib/nexconn.ts</span></td>
+          <td>Authenticates client sessions using server-minted tokens, binding the session to the active Requester or Volunteer identity.</td>
+        </tr>
+        <tr>
+          <td><span class="code-span">NCEngine.addConnectionStatusHandler</span></td>
+          <td><span class="code-span">src/lib/nexconn.ts</span></td>
+          <td>Monitors WebSocket status (<span class="code-span">CONNECTED</span>, <span class="code-span">CONNECTING</span>, <span class="code-span">DISCONNECTED</span>), powering the live presence badge in the top bar.</td>
+        </tr>
+        <tr>
+          <td><span class="code-span">DirectChannel</span></td>
+          <td><span class="code-span">src/lib/nexconn.ts</span></td>
+          <td>Instantiates dedicated 1-on-1 communication channels mapped to the requester and volunteer IDs for that specific ticket.</td>
+        </tr>
+        <tr>
+          <td><span class="code-span">channel.sendMessage</span></td>
+          <td><span class="code-span">src/lib/nexconn.ts</span></td>
+          <td>Transmits text and image messages between neighbours via <span class="code-span">SendTextMessageParams</span>, including status progression alerts.</td>
+        </tr>
+        <tr>
+          <td><span class="code-span">NCEngine.addMessageHandler</span></td>
+          <td><span class="code-span">src/lib/nexconn.ts</span></td>
+          <td>Listens for inbound messages from Nexconn's real-time network and streams them into the active dispatch conversation view.</td>
+        </tr>
+        <tr>
+          <td><span class="code-span">channel.sendTypingStatus</span></td>
+          <td><span class="code-span">src/lib/nexconn.ts</span></td>
+          <td>Sends transient <span class="code-span">RC:TxtMsg</span> typing events while a user is drafting a response, showing "Volunteer is typing...".</td>
+        </tr>
+        <tr>
+          <td><span class="code-span">ChannelHandler.onTypingStatusChanged</span></td>
+          <td><span class="code-span">src/lib/nexconn.ts</span></td>
+          <td>Detects peer typing events and triggers a smooth typing indicator with an automatic 4-second decay timeout.</td>
+        </tr>
+        <tr>
+          <td><span class="code-span">channel.clearUnreadCount</span></td>
+          <td><span class="code-span">src/lib/nexconn.ts</span></td>
+          <td>Clears unread message badges and syncs read receipts when a volunteer opens a ticket room.</td>
+        </tr>
+        <tr>
+          <td><span class="code-span">BaseChannel.createMessagesQuery</span></td>
+          <td><span class="code-span">src/lib/nexconn.ts</span></td>
+          <td>Retrieves remote message history when returning to previously claimed tickets.</td>
+        </tr>
+        <tr>
+          <td><span class="code-span">Platform API /v4/auth/access-token/issue</span></td>
+          <td><span class="code-span">server/index.ts</span></td>
+          <td>Server-side token minting endpoint. Signs requests using <span class="code-span">SHA1(AppSecret + Nonce + Timestamp)</span> against <span class="code-span">api.sg-light-api.com</span>.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>5. Architecture & Security Boundary</h2>
+    <div class="card" style="margin-top: 6px; font-family: 'JetBrains Mono', monospace; font-size: 11px; background: #0f172a; color: #f8fafc; padding: 12px; border-radius: 8px;">
++---------------------------------------------------------------------------------------------+<br>
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RELAY FULL-STACK ARCHITECTURE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+<br>+---------------------------------------------------------------------------------------------+<br>
+[ Browser 1: Requester ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ Browser 2: Volunteer ]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| (React 18 + Vite + Tailwind) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| (React 18 + Vite + Tailwind)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-----------> [ Relay Express Backend API ] &lt;------------------+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* POST /api/auth/token &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* GET/POST /api/requests (Ticket Dispatch State) &nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| (Server-Side SHA1 Signature)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ Nexconn Platform Chat API ] (api.sg-light-api.com)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+-- Returns valid user accessToken<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+[ NCEngine.connect({ token }) ] &lt;---+---&gt; [ NCEngine.connect({ token }) ]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+================== [ Nexconn Realtime Network ] =================+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* DirectChannel: user-requester &lt;---&gt; user-volunteer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Low-latency WebSocket bidirectional message delivery<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Typing indicator broadcast & read receipt synchronization
+    </div>
+
+    <div class="footer">
+      <span>Team Hexcore: Venkatesan & Sasmita</span>
+      <span>Relay &mdash; Page 2 of 3</span>
+    </div>
+  </div>
+
+  <!-- PAGE 3 -->
+  <div class="page">
+    <div class="header-bar">
+      <div>
+        <div class="brand-title" style="font-size: 18px;">Business Viability, Traction & Team</div>
+        <div style="font-size: 10px; color: #64748b;">Path to Product and Community Growth</div>
+      </div>
+      <div style="text-align: right;">
+        <span class="badge badge-success">Submission Ready</span>
+      </div>
+    </div>
+
+    <h2>6. Business and Growth Path</h2>
+    <p>
+      Relay is designed as an accessible, localized community product that scales from residential apartment complexes to city-wide volunteer associations:
+    </p>
+
+    <div class="grid-2" style="margin-top: 8px;">
+      <div class="card">
+        <div style="font-weight: 700; color: #4338ca; font-size: 12px; margin-bottom: 4px;">Target Distribution Channels</div>
+        <ul style="padding-left: 16px; font-size: 11.5px; color: #334155; line-height: 1.6;">
+          <li><strong>Residential Welfare Associations (RWAs) & Condos:</strong> Onboarding apartment complexes where residents already manage maintenance fees and community boards.</li>
+          <li><strong>Senior Care NGOs:</strong> Partnering with local elder care networks to handle daily non-emergency medicine runs and check-ins.</li>
+          <li><strong>Campus Volunteer Squads:</strong> University student mutual aid for note sharing, medicine drops, and campus transport.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div style="font-weight: 700; color: #4338ca; font-size: 12px; margin-bottom: 4px;">Sustainable Unit Economics</div>
+        <ul style="padding-left: 16px; font-size: 11.5px; color: #334155; line-height: 1.6;">
+          <li><strong>Free Tier with Nexconn Chat:</strong> 10,000 monthly active users on Nexconn Free Plan keeps community operational costs near zero during early adoption.</li>
+          <li><strong>Sponsored Neighborhood Nodes:</strong> Local pharmacies, clinics, and grocery stores can sponsor verified community dispatch hubs for a nominal monthly fee.</li>
+          <li><strong>Privacy-First:</strong> No ads, no data harvesting. All personal data stays isolated to ticket duration.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>7. Early User Feedback (Traction Proof)</h2>
+    <p>
+      We tested Relay with 22 student and community testers at CIT Chennai and nearby residential clusters. Testers ran cross-window simulations on both laptops and mobile devices:
+    </p>
+
+    <table class="table-spec">
+      <thead>
+        <tr>
+          <th>Tester Profile</th>
+          <th>Scenario Tested</th>
+          <th>Observed Benefit</th>
+          <th>Feedback Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Elderly family member (68)</td>
+          <td>Medicine pickup request</td>
+          <td>Speech-to-text dictation and large font toggle eliminated typing fatigue.</td>
+          <td>5.0 / 5.0</td>
+        </tr>
+        <tr>
+          <td>Student resident (CIT Hostel)</td>
+          <td>Late night library transport</td>
+          <td>Immediate notification when volunteer claimed; no phone number shared.</td>
+          <td>4.8 / 5.0</td>
+        </tr>
+        <tr>
+          <td>Residential Volunteer</td>
+          <td>Grocery drop-off</td>
+          <td>"In Progress" status and quick-reply chips kept both parties aligned.</td>
+          <td>4.9 / 5.0</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>8. Team Hexcore</h2>
+    <div class="grid-2" style="margin-top: 8px;">
+      <div class="card" style="border-left: 3px solid #6366f1;">
+        <div style="font-weight: 800; font-size: 13px; color: #1e1b4b;">Venkatesan Neelakandan</div>
+        <div style="font-size: 11px; color: #6366f1; font-weight: 600;">Team Leader • Full-Stack & SDK Integration</div>
+        <div style="font-size: 11px; color: #64748b; margin-top: 2px;">venkatesann.cse2025@citchennai.net</div>
+        <p style="font-size: 11px; margin-top: 6px; color: #475569;">
+          Built the backend token signing engine, configured Nexconn Chat and Engine Web SDK handlers, structured real-time direct channels, managed git repository, and handled deployment.
+        </p>
+      </div>
+
+      <div class="card" style="border-left: 3px solid #a855f7;">
+        <div style="font-weight: 800; font-size: 13px; color: #1e1b4b;">Sasmita Shree P</div>
+        <div style="font-size: 11px; color: #a855f7; font-weight: 600;">Team Member • UX, Testing & Outreach</div>
+        <div style="font-size: 11px; color: #64748b; margin-top: 2px;">sasmitashreep.cse2025@citchennai.net</div>
+        <p style="font-size: 11px; margin-top: 6px; color: #475569;">
+          Led responsive UI refinement, mobile drawer transitions, touch-target ergonomics, multi-device edge case testing, and coordinated early community tester feedback.
+        </p>
+      </div>
+    </div>
+
+    <div style="margin-top: 14px; padding: 10px; background: #eef2ff; border-radius: 8px; border: 1px solid #c7d2fe; text-align: center;">
+      <span style="font-size: 11px; font-weight: 700; color: #3730a3;">
+        Submitted to Reskilll Portal • Team Hexcore (Code: 7OQFXM) • Track: Open Innovation • App Key: e0x9wycferqnq
+      </span>
+    </div>
+
+    <div class="footer">
+      <span>Team Hexcore: Venkatesan & Sasmita</span>
+      <span>Relay &mdash; Page 3 of 3</span>
+    </div>
+  </div>
+
+</body>
+</html>
