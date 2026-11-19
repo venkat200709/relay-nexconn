@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Relay — Demo Video Voice-Over Script</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+
+    @page {
+      size: A4;
+      margin: 14mm 16mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      color: #0f172a;
+      background: #ffffff;
+      line-height: 1.6;
+      font-size: 13.5px;
+    }
+
+    .page {
+      page-break-after: always;
+      position: relative;
+    }
+
+    .page:last-child {
+      page-break-after: avoid;
+    }
+
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #4f46e5;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-radius: 6px;
+      background: #e0e7ff;
+      color: #4338ca;
+    }
+
+    .section-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .timestamp {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 11px;
+      color: #0284c7;
+      background: #e0f2fe;
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+
+    .section-title {
+      font-weight: 800;
+      font-size: 14px;
+      color: #1e1b4b;
+    }
+
+    .action-cue {
+      display: inline-block;
+      background: #fef08a;
+      color: #854d0e;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 11px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin: 4px 0;
+      border: 1px solid #fde047;
+    }
+
+    .speech-text {
+      color: #1e293b;
+      font-size: 13.5px;
+      font-weight: 500;
+      margin: 6px 0;
+      line-height: 1.65;
+    }
+
+    .speech-text strong {
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    .tip-box {
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 12px;
+      color: #065f46;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE 1 -->
+  <div class="page">
+    <div class="header-bar">
+      <div>
+        <div class="title">Relay &mdash; Demo Video Voice-Over Script</div>
+        <div style="font-size: 11px; color: #64748b; font-weight: 600;">Word-for-Word Teleprompter for OBS Studio Recording</div>
+      </div>
+      <div style="text-align: right;">
+        <span class="badge">Target Time: 2m 15s</span>
+        <div style="font-size: 10.5px; color: #64748b; margin-top: 2px;">Team Hexcore (Venkatesan & Sasmita)</div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <strong>Recording Setup:</strong> Place two browser windows side by side (Left = Eleanor at your live URL, Right = Incognito window as Venkatesan). Read the bold voice-over text aloud and perform the highlighted <span class="action-cue">[Actions]</span>.
+    </div>
+
+    <div style="height: 10px;"></div>
+
+    <!-- PART 1 -->
+    <div class="section-box">
+      <div class="section-header">
+        <span class="section-title">Part 1: The Problem & Introduction</span>
+        <span class="timestamp">0:00 &ndash; 0:25</span>
+      </div>
+      <div class="action-cue">[Keep screen showing two browser windows side by side]</div>
+      <p class="speech-text">
+        "Hello judges. I am Venkatesan, and along with my teammate Sasmita, we are <strong>Team Hexcore</strong> submitting for the <strong>Open Innovation</strong> track.
+      </p>
+      <p class="speech-text">
+        In every residential neighbourhood, urgent needs happen daily: an elderly resident running out of heart medicine in the rain, or a parent stranded at home with a sick toddler needing baby formula.
+      </p>
+      <p class="speech-text">
+        Today, people post these into chaotic WhatsApp or Telegram groups where requests get buried in seconds. Nobody knows who is helping whom, and volunteers hesitate to share their personal phone numbers with hundreds of strangers.
+      </p>
+      <p class="speech-text">
+        We built <strong>Relay</strong>: a dispatch-first community chat powered by the <strong>Nexconn Chat SDK</strong>."
+      </p>
+    </div>
+
+    <!-- PART 2 -->
+    <div class="section-box">
+      <div class="section-header">
+        <span class="section-title">Part 2: Posting an Urgent Need (Voice Dictation & Urgency)</span>
+        <span class="timestamp">0:25 &ndash; 0:55</span>
+      </div>
+      <div class="action-cue">[Focus on Left Window: Eleanor / Requester]</div>
+      <p class="speech-text">
+        "On the left is Eleanor, a 78-year-old resident living alone. On the right in an incognito window is Venkatesan, a neighbourhood volunteer. Relay includes one-click role switching so judges can test both sides immediately.
+      </p>
+      <div class="action-cue">[Click 'Post Request' in left window]</div>
+      <p class="speech-text">
+        Eleanor needs her prescription refilled. She selects the 'Medicine Run' category and tags it as 'High Urgency'.
+      </p>
+      <div class="action-cue">[Click microphone icon and dictate, or type: 'Need urgent Amlodipine blood pressure refill from Apollo Pharmacy']</div>
+      <p class="speech-text">
+        For accessibility, she can use the built-in voice dictation or toggle our large-font mode. She enters her apartment location and posts the request.
+      </p>
+      <div class="action-cue">[Click 'Open Dispatch Ticket']</div>
+    </div>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="page">
+    <div class="header-bar">
+      <div>
+        <div class="title" style="font-size: 16px;">Relay &mdash; Demo Video Script (Continued)</div>
+      </div>
+      <div style="text-align: right;">
+        <span class="badge">Page 2 of 2</span>
+      </div>
+    </div>
+
+    <!-- PART 3 -->
+    <div class="section-box">
+      <div class="section-header">
+        <span class="section-title">Part 3: Volunteer Live Feed & The Claim Flow</span>
+        <span class="timestamp">0:55 &ndash; 1:25</span>
+      </div>
+      <div class="action-cue">[Move cursor to Right Window: Venkatesan / Volunteer]</div>
+      <p class="speech-text">
+        "Over on the volunteer's screen, the ticket appears live in the community feed with an urgent pulsing red badge.
+      </p>
+      <div class="action-cue">[Point cursor to the ticket in feed]</div>
+      <p class="speech-text">
+        The volunteer can review the description, urgency, and distance. When ready, he clicks 'Claim & Chat'.
+      </p>
+      <div class="action-cue">[Click 'Claim & Chat &rarr;']</div>
+      <p class="speech-text">
+        Instantly, Relay provisions a dedicated, private chat room powered by <strong>Nexconn's DirectChannel</strong> infrastructure. Notice that the chat room opened simultaneously on both screens. Neither person had to expose their personal phone number or social media."
+      </p>
+    </div>
+
+    <!-- PART 4 -->
+    <div class="section-box">
+      <div class="section-header">
+        <span class="section-title">Part 4: Real-Time Chat, Typing Indicator & Quick Chips</span>
+        <span class="timestamp">1:25 &ndash; 1:55</span>
+      </div>
+      <div class="action-cue">[In Right Window: start typing a message]</div>
+      <p class="speech-text">
+        "Now, both neighbours can coordinate in real time. Notice on Eleanor's screen on the left: Nexconn's live typing indicator appears, letting her know the volunteer is actively responding.
+      </p>
+      <div class="action-cue">[Click the quick-reply chip 'On my way now' and hit send]</div>
+      <p class="speech-text">
+        The volunteer taps the 'On my way now' quick chip to save time while driving. Inbound messages are delivered instantly over low-latency WebSockets. We can also attach photos of prescription receipts or drop-off locations."
+      </p>
+    </div>
+
+    <!-- PART 5 -->
+    <div class="section-box">
+      <div class="section-header">
+        <span class="section-title">Part 5: Status Lifecycle Stepper & Thank-You Rating</span>
+        <span class="timestamp">1:55 &ndash; 2:20</span>
+      </div>
+      <div class="action-cue">[In Right Window: Click 'Start Task']</div>
+      <p class="speech-text">
+        "At the top of the room is our four-stage lifecycle banner: Open, Claimed, In Progress, and Resolved. When the volunteer reaches the pharmacy, he marks it 'In Progress', updating both screens.
+      </p>
+      <div class="action-cue">[In Right Window: Click 'Mark Resolved', type: 'Medicine delivered safely to door', and confirm]</div>
+      <p class="speech-text">
+        Once delivered, he marks it 'Resolved'.
+      </p>
+      <div class="action-cue">[In Left Window: Click 'Rate & Thank', select 5 stars, type: 'Thank you so much!', and submit]</div>
+      <p class="speech-text">
+        Eleanor is prompted to leave a five-star thank-you review, triggering a celebration and archiving the verified outcome into the neighbourhood record."
+      </p>
+    </div>
+
+    <!-- PART 6 -->
+    <div class="section-box">
+      <div class="section-header">
+        <span class="section-title">Part 6: Conclusion & Nexconn SDK Architecture</span>
+        <span class="timestamp">2:20 &ndash; 2:40</span>
+      </div>
+      <div class="action-cue">[Click 'Resolved Archive' tab on left screen, showing the completed card]</div>
+      <p class="speech-text">
+        "Relay is built strictly on the <strong>Nexconn Chat SDK</strong>, <strong>Engine</strong>, and secure server-side token APIs with SHA1 request signing.
+      </p>
+      <p class="speech-text">
+        With Nexconn's free plan supporting up to 10,000 monthly active users, residential associations and campus volunteer groups can run Relay with zero operational cost. Everything you just saw is live on our deployed URL and backed by our open-source GitHub repository. Thank you for your time!"
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
